@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriShop</title>
+    <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-database.js"></script>
+    <style>
+            .typed-cursor {
+            opacity: 0 !important; /* Completely hide the blinking cursor */
+        }
+    </style>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=
+    Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;
+    0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;
+    1,900&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+    <div class="fullContainer banner" id = "homeSection">
+        <header>
+            <div class="container">
+                <div class="logo">
+                    <img src="images/logo.png" alt="Logo" />
+                </div>
+                <nav>
+                    <div class="hamburger" id="hamburger">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="#homeSection">Home</a>
+                        </li>
+                        <li>
+                            <a href="#aboutSection">About Us</a>
+                        </li>
+                        <li>
+                            <a href="#productsSection">Buy Produce</a>
+                        </li>
+                        <li>
+                            <a href="contact.html">Contact Us</a>
+                        </li>
+                        <li id="navLoginSignup">
+                            <button id="loginBtn">Login / Signup</button>
+                        </li>
+                        
+                        <li id="navLogout" style="display: none;">
+                            <button id="logoutBtn">Logout</button>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        
+        <!-- The Modal -->
+        <div id="loginSignupModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+
+                <div id="loginForm">
+                    <h2>Login</h2>
+                    <div class="input-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="loginEmail" placeholder="Enter your email">
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="loginPassword" placeholder="Enter your password">
+                    </div>
+                    <button id="submitLogin">Login</button>
+                    <!-- <button id="googleLoginBtn">Login with Google</button> -->
+                    <p>Don't have an account? <a href="#" id="signupLink">Sign up here</a></p>
+                </div>
+
+                <div id="signupForm" style="display: none;">
+                    <h2>Sign Up</h2>
+                    <div class="input-group">
+                        <label for="signupName">Name:</label>
+                        <input type="text" id="signupName" placeholder="Enter your name">
+                    </div>
+                    <div class="input-group">
+                        <label for="signupEmail">Email:</label>
+                        <input type="email" id="signupEmail" placeholder="Enter your email">
+                    </div>
+                    <div class="input-group">
+                        <label for="signupPassword">Password:</label>
+                        <input type="password" id="signupPassword" placeholder="Enter your password">
+                        
+                    </div>
+                    <!-- <div class="input-group">
+                        <label for="confirmPassword">Confirm Password:</label>
+                        <input type="Password" id="confirmPassword" placeholder="Confirm password">
+                    </div> -->
+                    <button id="submitSignup">Sign Up</button>
+                    <p>Already have an account? <a href="#" id="loginLink">Login here</a></p>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="container introcnt">
+            <div class="intro">
+                <h1>Welcome to AgriShop!<br><span class="role"></span></h1>
+            <p>
+                Discover fresh, locally-sourced produce directly from the hands that grow it.
+                 Our platform connects farmers with consumers and retailers, cutting out the middleman
+                  and ensuring fair prices for everyone. Support local agriculture, enjoy farm-fresh products,
+                   and contribute to a sustainable future. Whether you're a farmer looking to sell or a customer
+                    seeking the best in quality and transparency, AgriShop is your go-to destination
+                     for an honest, efficient, and eco-friendly shopping experience.
+            </p>
+            </div>
+            
+            
+        </div>
+    </div>
+    <section class="fullContainer" id="aboutSection">
+        <div class="container">
+            <h2 class="sectionTitle">About Us</h2>
+            <p>
+                At Farmers Marketplace, we believe in fostering a direct connection between 
+                farmers and consumers. Our mission is to create a transparent and fair
+                 platform where farmers can sell their produce without the need for intermediaries, ensuring they receive the full value of their hard work. By bridging the gap between farm and table, we empower local farmers,
+                  promote sustainable agriculture, and provide customers with fresh, high-quality products. Our commitment is to make healthy, locally-grown food accessible to all while supporting
+                   the agricultural community and creating a more sustainable future.
+            </p>
+            <div class="cards">
+                <div class="buyProductsBox">
+                    <div class="title">Buy Products</div>
+                    <p>
+                        Every purchase you make directly benefits farmers, helping them thrive while providing
+                         you with fresh, locally-grown products. By choosing to buy from us, you're not only 
+                         enjoying the best quality produce but also supporting sustainable agriculture and 
+                         local communities. Shop now and make a difference with every purchase.
+                    </p>
+                    <button class="buyProductsBtn">Buy Now</button>
+                </div>
+                <div class="joinFarmarBox">
+                    <div class="title">Join as a farmer</div>
+                    <p>
+                        Joining Farmers Marketplace means more than just selling your produce
+                        it's about gaining support, expanding your reach, and building a sustainable future.
+                         Share your products directly with consumers and retailers, earn fair prices, and grow
+                          your business with us. Together, we can create a better
+                           agricultural system.
+                    </p>
+                    <button class="joinBtn" >Join Now</button>
+                </div>
+                <div class="farmersMarket">
+                    <div class="title">Market for Farmers</div>
+                    <p>
+                        Access to the right tools and resources is essential for every farmer’s growth.
+                         Our marketplace offers a wide range of farming essentials from seeds and 
+                         fertilizers to equipment ensuring you have everything you need.
+                         By purchasing through our platform, you're not only investing
+                          but also supporting the community.
+                    </p>
+                    <button>
+                        Explore    
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="products" id="productsSection">
+        <div class="container">
+            <h2 class="sectionTitle">Buy Products</h2>
+            <div class="boxContainer">
+                <div class="box">
+                    <div class="cardImage"></div>
+                    <div class="programTitle">Dairy Products</div>
+                    <button class="AddToCartBtn">Buy Now</button>
+                </div>
+                <div class="box">
+                    <div class="cardImage"></div>
+                    <div class="programTitle">Vegetables/Fruits</div>
+                    <button class="AddToCartBtn">Buy Now</button>
+                </div>
+                <div class="box">
+                    <div class="cardImage"></div>
+                    <div class="programTitle">Grains/Pulses</div>
+                    <button class="AddToCartBtn">Buy Now</button>
+                </div>
+                <div class="box">
+                    <div class="cardImage"></div>
+                    <div class="programTitle">Oils/Spices</div>
+                    <button class="AddToCartBtn">Buy Now</button>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <footer id="contact">
+        <div class="container">
+            <div class="newsletterContainer">
+                <img src="logo.png" alt="">
+                <p>
+                    Stay connected with the farming community! Subscribe to our newsletter for the latest
+                     updates on farming tips, product launches, and exclusive offers. By signing up, you'll
+                      gain early access to new tools, resources, and insights that can help enhance your
+                       farming practices. Stay informed about upcoming events, marketplace features, and 
+                       ways to grow your business. Together, we can build a stronger, more sustainable future
+                        for farmers. Join our community today!
+                </p>
+                <input type="text" placeholder="Enter Your Email id"/>
+            </div>
+            <div class="linksContainer">
+                <div class="title">Useful Links</div>
+                <ul>
+                    <li>
+                        <a href="#homeSection">Home</a>
+                    </li>
+                    <li>
+                        <a href="#aboutSection">About Us</a>
+                    </li>
+                    <li>
+                        <a href="#prduceSection">Products</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="connectContainer">
+                <div class="title">Connect With Us</div>
+                <p>
+                    Malaviya National Institute of Technology Jaipur (MNIT) <br>
+                    302017, Jaipur
+                </p>
+                <p>info@AgriShop.com</p>
+                <p>+91 7037052148</p>
+            </div>
+        </div>
+    </footer>
+   
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        var typeData = new Typed(".role", {
+          strings: [
+            "SELL PRODUCE",
+            "BUY PRODUCTS",
+            
+          ],
+          loop: true,
+          typeSpeed: 100,
+          backSpeed: 80,
+          backDelay: 1000,
+        });
+      </script>
+    <script type="module" src="home.js"></script>
+</body>
+</html>
