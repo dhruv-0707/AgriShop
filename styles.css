@@ -539,7 +539,7 @@ footer .newsletterContainer input{
 }
 @media screen and (max-width: 768px){
     .hamburger {
-        display: none; /* Hidden by default */
+        display: flex; /* Hidden by default */
         flex-direction: column; /* Stack items vertically */
         cursor: pointer; /* Change cursor to pointer */
     }
@@ -550,43 +550,42 @@ footer .newsletterContainer input{
         background-color: #fff; /* White bars */
         margin: 5px 0; /* Space between bars */
     }
-    
-    /* Media query for responsive navigation */
-    @media screen and (max-width: 768px) {
         .intro{
             width : 100%;
         }
         header nav ul {
             position: absolute; /* Position the dropdown menu */
-            right: -100%; /* Hide off-screen */
+            right: 10px; /* Hide off-screen */
             top: 75px; /* Position below the nav */
             flex-direction: column; /* Stack vertically */
             background-color: rgba(0, 0, 0, 0.8); /* Background color for dropdown */
             transition: right 0.3s; /* Smooth transition */
             padding: 10px 0; /* Padding for dropdown */
-            width: 100%; /* Full width */
+            width: 30%;
             display: none; /* Hide by default */
         }
     
-        header nav.active ul {
+        header nav ul.active {
             right: 0; /* Show when active */
             display: flex; /* Show links in a column */
         }
-    
-        .hamburger {
-            display: flex; /* Show hamburger menu */
-        }
-    
         header nav ul li {
-            display: block; /* Display each item block-wise in dropdown */
+            display: flex; /* Display each item block-wise in dropdown */
             width: 100%; /* Full width */
+            font-size: 3.5vw;
+            justify-content: center;
         }
     
         header nav ul li a {
+            width: 100%;
             text-align: center; /* Center text in dropdown */
-            line-height: 50px; /* Adjust line height */
+           font-size: 3.5vw;
         }
-    }
+        header nav ul li button{
+            text-align: center;
+            font-size: 3vw;
+
+        }
     .banner{
         background-position-x:65%;
     }
@@ -600,12 +599,6 @@ footer .newsletterContainer input{
     }
     #aboutSection .cards > div:hover{
         width: 350px;
-    }
-    .education .educationContainer{
-        width: 96%;
-    }
-    .education .educationContainer p{
-        margin-bottom: 10px 0 20px;
     }
 }
 @media screen and (max-width:425px){
@@ -631,21 +624,13 @@ footer .newsletterContainer input{
     .products .boxContainer{
         grid-template-columns: 1fr;
     }
-    .education .videoPlayer{
-        width: 1400px;
-    }
-    .education .educationContainer {
-        width: 93%;
-    }
+    
     footer .container{
         grid-template-columns: 1fr;
     }
 }
 @media screen and (max-width: 320px){
-    .education .educationContainer h3{
-        font-size: 18px;
-        line-height: 24px;
-    }
+   
     .banner h1{
         margin-top: 100px;
     }

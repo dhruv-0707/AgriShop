@@ -1,5 +1,5 @@
 // Sample data for produce items
-const menuToggle = document.querySelector('.menu-toggle');
+const menuToggle = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
 
     // Add event listener to the menu-toggle button
