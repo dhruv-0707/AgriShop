@@ -1,6 +1,7 @@
 :root {
     --themeGreen: #2e8b57;
     --gray: #efefef;
+    --navbar:rgba(18, 100, 89, 0.6);
 }
 html{
     scroll-behavior: smooth;
@@ -26,7 +27,7 @@ p{
 }
 
 .sectionTitle{
-    width: 300px;
+    width: fit-content;
     border-bottom: 3px solid var(--themeGreen);
     text-align: center;
     font-size: 2rem;
@@ -255,7 +256,7 @@ p a:hover {
 .banner {
     min-height: 100vh;
     width: 100%;
-    background-image: url(images/farm2.jpg);
+    background-image: url(images/farm.jpg);
     background-size: cover;
     background-attachment: fixed;
 }
@@ -271,7 +272,7 @@ p a:hover {
 }
 .banner h1 span{
     /* background-color: var(--themeGreen); */
-    color: #004e22;
+    color: #006d3a;
     display: inline-block;
     line-height: 3.5rem;
     /* padding: 0 15px; */
@@ -287,7 +288,8 @@ p a:hover {
     margin-top: 10px;
     text-align: justify;
 }
-.banner button{
+.banner button,
+.nav-menu button{
     background-color: var(--themeGreen);
     border: 0;
     outline: none;
@@ -337,7 +339,7 @@ p a:hover {
     
 }
 #aboutSection .cards > div:hover{
-    transform: translateY(-5px);
+    /* transform: translateY(-5px); */
     border-color: var(--themeGreen);
     box-shadow: 0 0 10px #000;
     /* margin-top: -20px;
@@ -356,6 +358,7 @@ p a:hover {
     margin-top: 15px;
 }
 #aboutSection .cards > div button{
+    background-color: var(--themeGreen);
     border: 1px solid var(--themeGreen);
     outline:none;
     padding: 7px 15px;
@@ -363,10 +366,11 @@ p a:hover {
     font-size: 12px;
     border-radius: 3px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
-#aboutSection .cards > div:hover button{
-    background-color: var(--themeGreen);
+#aboutSection .cards > div button:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 0 5px black;
     color: #fff;
 }
 .products{
@@ -453,7 +457,79 @@ p a:hover {
     outline: none;
     cursor: pointer;
 }
+/* PRODUCE.HTML KI CSS */
 
+.categories{
+    width: 100%;
+    padding: 2px;
+    /* background-color: var(--gray); */
+}
+.categories ul{
+    display: flex;
+    flex-wrap:wrap ;
+}
+.categories ul span{
+    margin: 3px;
+    font-size: 3vh;
+    padding: 5px 20px;
+    box-shadow: 0 0 1px #444;
+    border: 1px solid #ccc;
+    color:#444;
+    background-color: var(--gray);
+    border-radius: 5px;
+    transition :0.2s ease;
+}
+.categories ul span.active{
+    box-shadow: 0 2.5px 0 #444;
+}
+.categories ul span:hover{
+    transform: translateY(-1px);
+    box-shadow: 0 2.5px 0 #444;
+    /* transform: translateY(-1px); */
+    cursor: pointer;
+}
+
+.produce-container{
+    
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap; /* Enables flex items to wrap */
+    gap: 16px;
+}
+.produce-item {
+    background-color: var(--gray);
+    width: 220px;
+    padding: 10px;
+    margin: 10px;
+    color: #444;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    transition: 0.1s ease;
+}
+
+.produce-item img{
+    height: 200px;
+    width: 100%;
+}
+.produce-item button{
+    background-color: var(--themeGreen);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition:  0.4s ease;
+}
+.produce-item:hover{
+    box-shadow: 0 0 8px #000 ;
+}
+.produce-item button:hover{
+    transform: translatey(-3px);
+    
+    
+}
 footer{
     background-color: #181818;
     color: #7f7f7f;
@@ -536,8 +612,32 @@ footer .newsletterContainer input{
     .intro{
         width:100%;
     }
+    
 }
 @media screen and (max-width: 768px){
+    .produce-container{
+        
+        gap: 5px;
+    }
+    .produce-item{
+        width: 120px;
+        font-size: 1.5vh;
+        
+        margin: 5px;
+    }
+    .produce-item img{
+        height: 130px;
+        width: 100%;
+    }
+    .produce-item p{
+        font-size: 1.5vh;
+    }
+    .produce-item button{
+        padding: 5px;
+        font-size: 1.2vh;
+        align-items: center;
+    }
+   
     .hamburger {
         display: flex; /* Hidden by default */
         flex-direction: column; /* Stack items vertically */
@@ -586,6 +686,7 @@ footer .newsletterContainer input{
             font-size: 3vw;
 
         }
+        
     .banner{
         background-position-x:65%;
     }
@@ -599,6 +700,9 @@ footer .newsletterContainer input{
     }
     #aboutSection .cards > div:hover{
         width: 350px;
+    }
+    footer .container{
+        grid-template-columns: 1fr;
     }
 }
 @media screen and (max-width:425px){
