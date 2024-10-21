@@ -583,9 +583,7 @@ footer .newsletterContainer input{
         width: 100%;
         padding: 0 15px;
     }
-    .education .videoPlayer{
-        width: 1280px;
-    }
+    
 }
 @media screen and (max-width: 1080px){
     .intro{
@@ -621,7 +619,7 @@ footer .newsletterContainer input{
     }
     .produce-item{
         width: 120px;
-        font-size: 1.5vh;
+        font-size: 3vw;
         
         margin: 5px;
     }
@@ -630,14 +628,24 @@ footer .newsletterContainer input{
         width: 100%;
     }
     .produce-item p{
-        font-size: 1.5vh;
+        font-size: 3vw;
     }
     .produce-item button{
         padding: 5px;
         font-size: 1.2vh;
         align-items: center;
     }
-   
+    .produce-list .container h2{
+        font-size: 6vw;
+        margin-bottom: 20px;
+    }
+    .produce-list .container h2:after{
+       height: 10px;
+       width: 10px;
+    }
+    .categories ul span{
+        font-size: 3vw;
+    }
     .hamburger {
         display: flex; /* Hidden by default */
         flex-direction: column; /* Stack items vertically */
@@ -659,10 +667,11 @@ footer .newsletterContainer input{
             top: 75px; /* Position below the nav */
             flex-direction: column; /* Stack vertically */
             background-color: rgba(0, 0, 0, 0.8); /* Background color for dropdown */
-            transition: right 0.3s; /* Smooth transition */
+            transition: right 0.3s ease; /* Smooth transition */
             padding: 10px 0; /* Padding for dropdown */
             width: 30%;
             display: none; /* Hide by default */
+            
         }
     
         header nav ul.active {
