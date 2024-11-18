@@ -8,7 +8,40 @@
 <body>
     <!-- Header Section -->
     <header>
-        <!-- Same as in index.html -->
+        <div class="container">
+            <div class="logo">
+                <a href="#homeSection"><img src="images/logo.png" alt="Logo" /></a>
+                
+            </div>
+            <nav >
+                <div class="hamburger" id="hamburger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <ul class = "nav-menu">
+                    <li>
+                        <a href="#homeSection">Home</a>
+                    </li>
+                    <li>
+                        <a href="#aboutSection">About Us</a>
+                    </li>
+                    <li>
+                        <a href="#productsSection">Buy Produce</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact Us</a>
+                    </li>
+                    <li id="navLoginSignup">
+                        <button id="loginBtn">Login </button>
+                    </li>
+                    
+                    <li id="navLogout" style="display: none;">
+                        <button id="logoutBtn">Logout</button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <!-- Farmer Profiles Section -->
@@ -17,13 +50,19 @@
             <h2>Meet Our Farmers</h2>
             <div class="farmer-profile">
                 <img src="images/farmer1.jpg" alt="Farmer John">
-                <h3>John Doe</h3>
+                <h3>Farmer 1</h3>
                 <p>Organic farmer specializing in fruits and vegetables.</p>
                 <a href="produce.html" class="btn">View Produce</a>
             </div>
             <div class="farmer-profile">
                 <img src="images/farmer2.jpg" alt="Farmer Emma">
-                <h3>Emma Smith</h3>
+                <h3>Farmer 2</h3>
+                <p>Sustainable grain producer with eco-friendly practices.</p>
+                <a href="produce.html" class="btn">View Produce</a>
+            </div>
+            <div class="farmer-profile">
+                <img src="images/farmer3.jpg" alt="Farmer Emma">
+                <h3>Farmer 3</h3>
                 <p>Sustainable grain producer with eco-friendly practices.</p>
                 <a href="produce.html" class="btn">View Produce</a>
             </div>
@@ -32,8 +71,48 @@
     </section>
 
     <!-- Footer Section -->
-    <footer>
-        <!-- Same as in index.html -->
+    <footer id="contact">
+        <div class="container ftr">
+            <div class="newsletterContainer">
+                <img src="logo.png" alt="">
+                <p>
+                    Stay connected with the farming community! Subscribe to our newsletter for the latest
+                     updates on farming tips, product launches, and exclusive offers. By signing up, you'll
+                      gain early access to new tools, resources, and insights that can help enhance your
+                       farming practices. Stay informed about upcoming events, marketplace features, and 
+                       ways to grow your business. Together, we can build a stronger, more sustainable future
+                        for farmers. Join our community today!
+                </p>
+                <input type="text" placeholder="Enter Your Email id"/>
+            </div>
+            <div class="linksContainer">
+                <div class="title">Useful Links</div>
+                <ul>
+                    <li>
+                        <a href="#homeSection">Home</a>
+                    </li>
+                    <li>
+                        <a href="#aboutSection">About Us</a>
+                    </li>
+                    <li>
+                        <a href="#productsSection">Products</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="connectContainer">
+                <div class="title">Connect With Us</div>
+                <p>
+                    Malaviya National Institute of Technology Jaipur (MNIT) <br>
+                    302017, Jaipur
+                </p>
+                <p>info@AgriShop.com</p>
+                <p>+91 7037052148</p>
+            </div>
+        </div>
     </footer>
+   
 </body>
 </html>
