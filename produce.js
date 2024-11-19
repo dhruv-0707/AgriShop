@@ -1,7 +1,7 @@
 const produceItems = [
     {
         name: 'Organic Tomatoes',
-        price: '$2.00 / kg',
+        price: '₹20.00 / kg',
         description: 'Fresh organic tomatoes from our farm.',
         image: 'images/tomatoes.jpg',
         seller: 'seller1',
@@ -9,7 +9,7 @@ const produceItems = [
     },
     {
         name: 'Farm Fresh Carrots',
-        price: '$1.50 / kg',
+        price: '₹10.50 / kg',
         description: 'Crunchy and sweet carrots harvested this week.',
         image: 'images/carrots.jpg',
         seller: 'seller1',
@@ -17,7 +17,7 @@ const produceItems = [
     },
     {
         name: 'Free-range Eggs',
-        price: '$3.00 / dozen',
+        price: '₹30.00 / dozen',
         description: 'Organic eggs from free-range chickens.',
         image: 'images/eggs.jpg',
         seller: 'seller1',
@@ -25,7 +25,7 @@ const produceItems = [
     },
     {
         name: 'Organic Tomatoes',
-        price: '$2.00 / kg',
+        price: '₹20.00 / kg',
         description: 'Fresh organic tomatoes from our farm.',
         image: 'images/tomatoes.jpg',
         seller: 'seller2',
@@ -33,7 +33,7 @@ const produceItems = [
     },
     {
         name: 'Farm Fresh Carrots',
-        price: '$1.50 / kg',
+        price: '₹10.50 / kg',
         description: 'Crunchy and sweet carrots harvested this week.',
         image: 'images/carrots.jpg',
         seller: 'seller2',
@@ -41,7 +41,7 @@ const produceItems = [
     },
     {
         name: 'Free-range Eggs',
-        price: '$3.00 / dozen',
+        price: '₹30.00 / dozen',
         description: 'Organic eggs from free-range chickens.',
         image: 'images/eggs.jpg',
         seller: 'seller2',
@@ -49,7 +49,7 @@ const produceItems = [
     },
     {
         name: 'Organic Tomatoes',
-        price: '$2.00 / kg',
+        price: '₹20.00 / kg',
         description: 'Fresh organic tomatoes from our farm.',
         image: 'images/tomatoes.jpg',
         seller: 'seller3',
@@ -57,7 +57,7 @@ const produceItems = [
     },
     {
         name: 'Farm Fresh Carrots',
-        price: '$1.50 / kg',
+        price: '₹10.50 / kg',
         description: 'Crunchy and sweet carrots harvested this week.',
         image: 'images/carrots.jpg',
         seller: 'seller3',
@@ -65,7 +65,7 @@ const produceItems = [
     },
     {
         name: 'Free-range Eggs',
-        price: '$3.00 / dozen',
+        price: '₹30.00 / dozen',
         description: 'Organic eggs from free-range chickens.',
         image: 'images/eggs.jpg',
         seller: 'seller3',
@@ -73,7 +73,7 @@ const produceItems = [
     },
     {
         name: 'Organic Tomatoes',
-        price: '$2.00 / kg',
+        price: '₹20.00 / kg',
         description: 'Fresh organic tomatoes from our farm.',
         image: 'images/tomatoes.jpg',
         seller: 'seller4',
@@ -96,7 +96,7 @@ function displayProduce() {
         produceDiv.innerHTML = `
             <img src="${item.image}" alt="${item.name}">
             <h3>${item.name}</h3>
-            <a href="#">${item.seller}</a>
+            <a href="farmer.html">${item.seller}</a>
             <p><strong>${item.price}</strong></p>
             <button class="btn">Buy Now</buttom>
             
